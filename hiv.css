@@ -1,0 +1,63 @@
+body{
+    background-color: #79031D;
+    color: #F5F7F7;
+}
+
+.body2{
+    background-color: white;
+    color:black;
+}
+
+#order{
+    transition-duration: 0.4s;
+}
+
+#order:hover{
+    background-color: #F5F7F7;
+    color: #79031D;}
+ 
+ #image2{
+    border-radius: 50px;
+    border:5px solid white;
+    padding-right: 5px;
+    
+}  
+
+@media(max-width:640px){
+    #image1{
+        display:inline;
+        border-radius: 80px;
+    } }
+
+    @media(max-width:640px){
+        #image2{
+            display:none
+        }
+    }
+
+@media only screen and (min-width:640px){
+    #image1{
+        display:none;
+    } 
+} 
+.container {
+    position: relative;
+  }
+  
+  .topleft {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+    
+  }
+  
+  #slide1 { 
+    opacity: 0.3;
+  }
+
+@media only screen and (min-width:768px){
+  .topleft > p{
+    margin-bottom: 60px;
+} }
+
