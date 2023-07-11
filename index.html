@@ -22,7 +22,13 @@
   <link
     href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
     rel="stylesheet" >
-    <link rel="stylesheet" href="https://technurse911.github.io/hiv.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+     
+    <link rel="stylesheet" href="hiv.css">
+    <link rel="stylesheet" href="navbar.css">
    
     <title>Document</title>
 </head>
@@ -30,15 +36,58 @@
 <body>
 
 
+
+  
+  <header>
+    <div class="navbar">
+        <div class="logo"> <a href="#">ORALQUICK</a></div>
+        <ul class="links">
+            <li><a href="home">Home</a></li>
+            <li><a href="home">FAQ</a></li>
+            <li><a href="home">Order</a></li>
+            <li><a href="home">Councelling</a></li>
+            <li><a href="home">Services</a></li>
+        </ul>
+        <a href="#" class="action_btn">Hello</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars fa-lg"></i>
+           
+        </div>
+    </div>
+
+        <div class="dropdown_menu">
+            <li><a href="home">Home</a></li>
+            <li><a href="home">FAQ</a></li>
+            <li><a href="home">Order</a></li>
+            <li><a href="home">Councelling</a></li>
+            <li><a href="home">Services</a></li>
+            <li> <a href="#" class="action_btn">Hello</a></li>
+        </div>     
+      </header>
+
+      <section>
+        <div class="hero leading-loose">
+      <p > <span class="firstword">A</span>re you sexually active? </p>
+      <p > <span class="firstword">H</span>ave recently been diagnosed with STI?</p>
+      <p ><span class="firstword">H</span>ave shared needles or other injecting equipment?</p>
+      <p ><span class="firstword">W</span>orried about HIV and need reassurance? </p>
+      </div>
+      </section>
+
+
+
+
        <!-- slide show -->
-  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+
+  <!-- <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
   <div class="container">
     <img id="slide1" src="https://user-images.githubusercontent.com/87780625/144140898-93780cdd-35e9-4de4-96b7-939530f8a8d2.jpg" class="w-full h-100 md:w-full md:h-70"  alt="...">
     <div class="topleft ">
       <p style="color:white" class="text-1xl md:text-4xl lg:text-4xl font-bold mt-1  md:mt-1 md:ml-30 lg:md-32 md:pt-12 "> Are you sexually active? </p>
-      <p style="color:red" class=" md:text-3xl  lg:text-4xl font-semibold  md:mt-0.5  md:ml-30 lg:md-32"> Have recently been diagnosed with STI?</p>
+      <p style="color:white" class=" md:text-3xl  lg:text-4xl font-semibold  md:mt-0.5  md:ml-30 lg:md-32"> Have recently been diagnosed with STI?</p>
       <p style="color:white" class=" md:text-3xl  lg:text-4xl font-semibold   md:mt-0.5 md:ml-30 lg:md-32">Have shared needles or other injecting equipment?</p>
       <p style="color:white" class=" md:text-3xl  lg:text-4xl font-semibold md:mt-0.5  md:ml-30 mb-2 lg:md-32">Worried about HIV and need reassurance? </p>
       </div> 
@@ -69,7 +118,7 @@
     </div>
   </div>
       </div>
-        </div>
+        </div> -->
    
   <!-- end of slide show -->
             
@@ -205,30 +254,22 @@
                 </div> 
                </div>
             </div>
-            <!-- Footer -->
-            <nav class="navbar navbar-expand-sm fixed-bottom navbar-dark " style="background-color:#79031D">
-              <div class="container-fluid">
-              <div class="collapse navbar-collapse justify-content-end" id="navy">
-                <ul class="navbar-nav font-semi-bold text-lg md:text-1xl md:space-x-10 ">
-                 <li class="nav-item">
-                   <a class="nav-link md:border md:rounded-lg md:px-6 md:py-1" style="color:rgb(212, 184, 184); background-color:black" href="C:\Users\User\Documents\tech nurse\Premiere Eye Centre\HIV.html">HOME</a>
-                 </li>
-                 <li class="nav-item">
-                   <a class="nav-link md:border md:rounded-lg md:px-10 md:py-1" style="color:rgb(212, 184, 184); background-color:black" href="#faq">FAQ</a>
-                 </li>
-                 <li class="nav-item">
-                  <a class="nav-link md:border md:rounded-lg md:px-6 md:py-1" style="color:rgb(212, 184, 184); background-color:black" href="#order">ORDER</a>
-                </li>
-                 <li class="nav-item">
-                  <a class="nav-link md:border md:rounded-lg md:px-6 md:py-1" style="color:rgb(212, 184, 184); background-color:black" href="#counselling">COUNSELLING</a>
-                </li>
-                </ul>
-              </div>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navy">
-                <span class="navbar-toggler-icon" style="color: black;"></span>
-              </button>
-            </div>
-            </nav>
+
+          
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+
+      toggleBtn.onclick = function(){
+          dropDownMenu.classList.toggle('open')
+          const isOpen = dropDownMenu.classList.contains('open')
+
+          toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+           : "fa-solid fa-bars "
+      }
+  </script>
               
 
 

@@ -45,12 +45,6 @@ body{
     position: relative;
   }
   
-  .topleft {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    
-  }
   
   #slide1 { 
     opacity: 0.8;
